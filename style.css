@@ -1,0 +1,264 @@
+* {
+    font-family: "Inter";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #b1f9b3, #ebe1ad);
+}
+
+.grid-contenedor {
+
+    box-sizing: 4px 4px 8px rgba(128 128 128);
+    text-align: center;
+    display: grid;
+    gap: 3%;
+    grid-template:
+        "header" 12%
+        "section-1" 35.5%
+        "section-2" 35.5%
+        "foot" 8%;
+}
+
+.header {
+    grid-area: header;
+}
+
+.logo {
+    position: relative;
+    top: 15%;
+    right: 30%;
+    cursor: pointer;
+}
+
+
+.section-1 {
+    grid-area: section-1;
+}
+
+.text-area {
+    width: 75%;
+    height: 75%;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 2.5vw;
+    line-height: 150%;
+    border: 1px solid #68a9ee;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px #b4f1db, 0 0 5px 2px #73C0F4;
+    opacity: 70%;
+}
+
+::placeholder {
+    color: #0A3871;
+}
+
+.text-area:focus,
+.mensaje:focus {
+    outline: none;
+}
+
+.text-area:focus::placeholder {
+    opacity: 0;
+}
+
+.informacion {
+    height: 10%;
+    color: #495057;
+    font-size: 2vw;
+}
+
+.informacion h6 {
+    position: relative;
+    top: 1.5vh;
+}
+
+
+.botones {
+    position: relative;
+    height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.btn-encriptar,
+.btn-desencriptar {
+    width: 30%;
+    height: 100%;
+    border-radius: 24px;
+    font-size: 2vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-encriptar {
+    background: #0A3871;
+    border: 1px solid #D8DFE8;
+    color: white;
+}
+
+.btn-desencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover {
+    transform: scale(1.05);
+}
+
+.btn-encriptar:hover {
+    background-color: #1e5496;
+}
+
+.btn-desencriptar:hover {
+    background: #bad7fa;
+}
+
+.section-2 {
+    grid-area: section-2;
+}
+
+.mensaje {
+    width: 60%;
+    height: 75%;
+    font-size: 2.5vw;
+    position: relative;
+    background-image: url("./Muñeco.png");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2%;
+    box-shadow: 0 0 10px rgba(224, 255, 24, 0.998);
+    opacity: 70%;
+}
+
+.texto-h3 {
+    position: relative;
+    bottom: 12%;
+    color: #0A3871;
+}
+
+.texto-h6 {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    bottom: 1.5vh;
+}
+
+h3 {
+    font-size: 13px;
+}
+
+.texto-h6 h6 {
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: #0A3871;
+}
+
+.copy {
+    height: 10%;
+}
+
+.copy button {
+    width: 10%;
+    height: 90%;
+    font-size: 2vw;
+    color: white;
+    background-color: #4f60e4;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.copy button:hover {
+    background-color: #b1bafb;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.foot {
+    grid-area: foot;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.foot h2 {
+    font-family: Arial;
+    font-size: 3vw;
+}
+
+@media (min-width:600px) {
+    .grid-contenedor {
+        grid-template:
+            "header header" 12%
+            "section-1 section-2" 78% "foot foot" 8%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .grid-contenedor {
+        gap: 1%
+    }
+
+    .logo {
+        top: 12%;
+        right: 40%;
+    }
+
+    .section-2 {
+        position: relative;
+        right: 4vw;
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar {
+
+        height: 80%;
+    }
+
+    .mensaje {
+        height: 77%;
+        background-size: 80%;
+    }
+
+    .texto-h3 {
+        height: 6.5%;
+        color: #343A40;
+        bottom: 6.5vh;
+    }
+
+    .texto-h3 h3 {
+        font-size: 1.8vw;
+        color: #0A3871;
+    }
+
+    .texto-h6 {
+        height: 6.5%;
+        bottom: 0;
+        font-size: 1.9vw;
+    }
+
+    .copy {
+        height: 10%;
+    }
+
+    .copy button {
+        width: 20%;
+        height: 80%;
+    }
+
+    .foot h2 {
+        font-size: 2.1vw;
+    }
+
+}
